@@ -27,6 +27,7 @@ header {
   background-color: var(--color-blue-850);
   padding: 40px;
   border-radius: 10px 100px 10px 10px;
+  max-width: 315px;
 }
 
 .header__logo {
@@ -41,7 +42,6 @@ header {
 
 .header__icon {
   display: flex;
-  align-self: center;
   justify-content: center;
   background-color: var(--color-blue-950);
   padding: 15px;
@@ -66,17 +66,17 @@ header {
   font-size: 14px;
   line-height: 1.15;
   font-weight: var(--font-weight-regular);
-  text-align: left;
 }
 
 .storage-card__bar {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: flex-start;
   background-color: var(--color-blue-950);
   border-radius: 10px;
   height: 20px;
   margin: 16px 0 8px 0;
+  padding: 3px;
   overflow: hidden;
 }
 
@@ -85,7 +85,7 @@ header {
   height: 14px;
   border-radius: 8px;
   width: 81.5%;
-  margin-left: 3px;
+  height: 100%;
 }
 
 .storage-card__bar-ball {
@@ -117,31 +117,28 @@ header {
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
-
   background-color: var(--color-white);
   width: 180px;
   height: 72px;
   border-radius: 10px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
+  color: var(--color-blue-950);
 }
 
 .storage-card__remaining-number {
   font-size: 40px;
-  color: var(--color-blue-950);
 }
 
 .storage-card__remaining-label {
   font-size: 12px;
   letter-spacing: 1px;
-  opacity: 50%;
-  color: var(--color-blue-950);
+  opacity: 0.5;
+  line-height: 1.15;
 }
 
 .footer__attribution {
@@ -153,4 +150,73 @@ header {
 
 .footer__attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  html {
+    background-color: var(--color-blue-950);
+  }
+
+  body {
+    background: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  .page {
+    padding: 114px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  header {
+    max-width: 350px;
+    height: 201px;
+  }
+
+  .storage-card {
+    position: relative;
+    width: 100%;
+    margin-left: 32px;
+    height: 154px;
+    margin-top: 0;
+  }
+
+  .storage-card__remaining {
+    position: absolute;
+    top: -48px;
+    right: 40px;
+  }
+
+  .storage-card__remaining-value {
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+    border-radius: 10px 10px 0 10px;
+  }
+
+  .storage-card__remaining-value::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-white);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: 100%;
+  }
 }
