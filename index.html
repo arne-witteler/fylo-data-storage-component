@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="Fylo Logo">
+        <ul class="header__icons">
+          <li class="header__icon">
+            <img src="./images/icon-document.svg" alt="Document Icon">
+          </li>
+          <li class="header__icon">
+            <img src="./images/icon-folder.svg" alt="Folder Icon">
+          </li>
+          <li class="header__icon">
+            <img src="./images/icon-upload.svg" alt="Upload Icon">
+          </li>
+        </ul>
+      </header>
+      <section class="storage-card">
+        <p class="storage-card__text">You’ve used <strong>815 GB</strong> of your storage</p>
+        <div class="storage-card__bar" role="progressbar" aria-valuenow="815" aria-valuemin="0" aria-valuemax="1000">
+          <div class="storage-card__bar-filled" style="width: 81.5%;"></div>
+        </div>
+        <div class="storage-card__remaining">
+          <p class="storage-card__remaining-value">
+            <span class="storage-card__remaining-number">185</span> GB Left
+        </p>
+        </div>
+        <div class="storage-card__scale">
+          <p class="storage-card__scale-start">0 GB</p>
+          <p class="storage-card__scale-end">1000 GB</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/arne-witteler">Arne Witteler</a>.</div>
+    </footer>
+  </body>
 </html>
