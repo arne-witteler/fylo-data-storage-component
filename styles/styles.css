@@ -6,10 +6,151 @@
   padding: 0;
 }
 
-.attribution {
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  background: url(/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.page {
+  padding: 24px;
+  width: 100%;
+}
+
+header {
+  background-color: var(--color-blue-850);
+  padding: 40px;
+  border-radius: 10px 100px 10px 10px;
+}
+
+.header__logo {
+  margin-bottom: 32px;
+}
+
+.header__icons {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.header__icon {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: var(--color-blue-950);
+  padding: 15px;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.header__icon img {
+  display: block;
+}
+
+.storage-card {
+  background-color: var(--color-blue-850);
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 16px;
+  color: var(--color-blue-200);
+}
+
+.storage-card__text {
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: var(--font-weight-regular);
+  text-align: left;
+}
+
+.storage-card__bar {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: var(--color-blue-950);
+  border-radius: 10px;
+  height: 20px;
+  margin: 16px 0 8px 0;
+  overflow: hidden;
+}
+
+.storage-card__bar-filled {
+  background: var(--color-gradient-2);
+  height: 14px;
+  border-radius: 8px;
+  width: 81.5%;
+  margin-left: 3px;
+}
+
+.storage-card__bar-ball {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -12px;
+}
+
+.storage-card__scale {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storage-card__scale-start, .storage-card__scale-end {
+  font-size: 12px;
+  line-height: 1.15;
+  font-weight: var(--font-weight-extra-bold);
+}
+
+.storage-card__remaining {
+  position: relative;
+  height: 0;
+}
+
+.storage-card__remaining-value {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: var(--color-white);
+  width: 180px;
+  height: 72px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+}
+
+.storage-card__remaining-number {
+  font-size: 40px;
+  color: var(--color-blue-950);
+}
+
+.storage-card__remaining-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 50%;
+  color: var(--color-blue-950);
+}
+
+.footer__attribution {
+  margin-top: 40px;
+  color: var(--color-blue-200);
   font-size: 11px;
   text-align: center;
 }
-.attribution a {
+
+.footer__attribution a {
   color: hsl(228, 45%, 44%);
 }

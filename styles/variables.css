@@ -10,15 +10,15 @@
   --color-blue-200: hsl(243, 100%, 93%);
 
   --color-gradient-1: linear-gradient(
-    180deg,
+    135deg,
     hsl(228, 56%, 26%),
-    hsl(229, 57%, 11%),
+    hsl(229, 57%, 11%)
   );
 
   --color-gradient-2: linear-gradient(
-    180deg,
+    90deg,
     hsl(6, 100%, 80%),
-    hsl(335, 100%, 65%),
+    hsl(335, 100%, 65%)
   );
 
   --font-family: 'Raleway', sans-serif;
